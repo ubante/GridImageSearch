@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 public class SettingsActivity extends Activity {
 	Spinner spnImageSize, spnColorFilter, spnImageType;
+	String passedImageSize, passedColorFilter, passedImageType;
 	EditText etSiteFilter;
 	Button btnSave;
 
@@ -23,7 +24,7 @@ public class SettingsActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_settings);
-		
+		passedColorFilter = getIntent().getExtras().getString("ColorFilter");
 		addListenerOnSpinnerItemSelection();
 		addListenerOnButton();
 	}

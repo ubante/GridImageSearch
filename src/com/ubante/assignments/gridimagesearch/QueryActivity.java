@@ -113,6 +113,7 @@ public class QueryActivity extends Activity {
 		Toast.makeText(this, "Switching to Settings", Toast.LENGTH_SHORT).show();
 		Intent settingsIntent = new Intent(this, SettingsActivity.class);
 		//startActivity(settingsIntent);
+		settingsIntent.putExtra("ColorFilter",colorFilter);
 		startActivityForResult(settingsIntent, REQUEST_CODE);
 	}
 	
